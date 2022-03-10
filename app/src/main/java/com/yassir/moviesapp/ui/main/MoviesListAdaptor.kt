@@ -30,7 +30,7 @@ class MoviesListAdaptor : RecyclerView.Adapter<MoviesListAdaptor.MovieHolder>() 
                 movieImage, ConfigurationRepoImp
                     .ImageConfiguration
                     .getFullImageUrl(
-                        movie.backdropPath, ConfigurationRepoImp.ImageType.BACKDROP
+                        movie.posterPath, ConfigurationRepoImp.ImageType.POSTER
                     ).toString()
             )
 

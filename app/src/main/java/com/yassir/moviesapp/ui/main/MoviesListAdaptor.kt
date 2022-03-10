@@ -39,9 +39,7 @@ class MoviesListAdaptor : RecyclerView.Adapter<MoviesListAdaptor.MovieHolder>() 
                     it(movie)
                 }
             }
-
         }
-
     }
 
     override fun getItemCount(): Int {

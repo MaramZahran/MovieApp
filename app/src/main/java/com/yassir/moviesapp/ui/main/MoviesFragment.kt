@@ -1,22 +1,16 @@
 package com.yassir.moviesapp.ui.main
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yassir.moviesapp.R
 import com.yassir.moviesapp.data.Status
 import com.yassir.moviesapp.databinding.MoviesFragmentBinding
-import com.yassir.moviesapp.network.repo.ConfigurationRepoImp
 import com.yassir.moviesapp.ui.BaseFragment
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
 
 class MoviesFragment : BaseFragment() {
 
@@ -40,21 +34,7 @@ class MoviesFragment : BaseFragment() {
 
         viewModel.getMovies()
 
-//        lifecycleScope.launch(Dispatchers.Main) {
-//            async(Dispatchers.IO) {
-//                try {
-//
-//                    viewModel.getMovies()
-//                }catch (e:Exception){
-//                    Log.e("Movie", e.message.toString(),e)
-////                    showMessage(e.message.toString())
-//
-//                }
-//            }
-//        }
-
         viewModel.uiStatus.observe(viewLifecycleOwner) {
-
 
             when (it.status) {
                 Status.SUCCESS -> {

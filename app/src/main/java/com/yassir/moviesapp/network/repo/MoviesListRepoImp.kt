@@ -15,7 +15,8 @@ class MoviesListRepoImp : MoviesListRepo {
     }
 
     override suspend fun fetchMovies(): MoviesList = retrofit.fetchMovies()
-    override suspend fun fetchMovieDetails(movieId: Int): Movie = retrofit.fetchMovieDetails(movieId)
+    override suspend fun fetchMovieDetails(movieId: Int): Movie =
+        retrofit.fetchMovieDetails(movieId)
 
 
 }

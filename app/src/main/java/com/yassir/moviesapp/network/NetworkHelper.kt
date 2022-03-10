@@ -13,10 +13,9 @@ object NetworkHelper {
     const val API_KEY = "api_key"
     const val MOVIES_LIST_BASE_URL = "https://api.themoviedb.org"
 
-    val logging = HttpLoggingInterceptor()
+    private val logging = HttpLoggingInterceptor()
 
-
-    val client = OkHttpClient.Builder()
+    private val client = OkHttpClient.Builder()
         .addInterceptor(logging)
         .build()
 
